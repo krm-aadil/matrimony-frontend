@@ -38,20 +38,3 @@ Docker Desktop
 Make (Standard on Linux/Mac, available via WSL or MinGW on Windows)
 
 
-Getting StartedLocal Development (Node)To run the development server natively on your machine:Install dependencies:Bashnpm install
-Start the development server:Bashnpm run dev
-Open http://localhost:3000 with your browser to see the result.Docker DevelopmentTo run the frontend within a Docker container (attached to the matrimony_net network so it can communicate directly with the backend containers):Build and start the container:Bashmake up-build
-The application will be accessible at http://localhost:3000.Available Commands (Makefile)We use a Makefile to simplify common development tasks. Run these commands from the root directory:CommandDescriptionmake devStarts the local Next.js development server.make buildBuilds the Docker image.make upStarts the Docker container in the background.make up-buildRebuilds the Docker image and starts the container.make downStops and removes the Docker container.make logsTails the logs for the frontend Docker container.make cleanStops the container, removes volumes/images, and deletes local build folders (.next, node_modules).
-
-
-
-***
-
-### How to push this to your new repository:
-
-Once you've saved the `README.md` file in Kiro, run these commands in the terminal to upload it:
-
-```bash
-git add README.md
-git commit -m "docs: add project README"
-git push

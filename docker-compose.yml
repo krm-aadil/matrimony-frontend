@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: matrimony_frontend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - matrimony_net
+
+networks:
+  matrimony_net:
+    external: true # This tells Docker to look for the network your Go backend created
